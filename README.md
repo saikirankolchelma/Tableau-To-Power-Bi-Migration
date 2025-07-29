@@ -25,7 +25,7 @@ Migrating dashboards from Tableau to Power BI typically requires **manual effort
 
 ```mermaid
 graph TD
-    subgraph ✨ Phase 1: Tableau Deconstruction & AI Analysis
+    subgraph  Phase 1: Tableau Deconstruction & AI Analysis
         A[Tableau .twbx File] --> B{Unpack TWBX}
         B --> C[TWB File (.xml)]
         B --> D[Data Source (.hyper/.csv)]
