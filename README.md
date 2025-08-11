@@ -21,46 +21,7 @@ Migrating dashboards from Tableau to Power BI typically requires **manual effort
 
 ---
 
-## 🌎 High-Level Architecture & Workflow
 
-```mermaid
-graph TD
-    subgraph  Phase 1: Tableau Deconstruction & AI Analysis
-        A[Tableau .twbx File] --> B{Unpack TWBX}
-        B --> C[TWB File (.xml)]
-        B --> D[Data Source (.hyper/.csv)]
-        C --> E{Parse XML Metadata}
-        E --> F1[Chart Details & Encodings]
-        E --> F2[Calculated Fields]
-        E --> F3[Layout & Coordinates]
-        E --> F4[Filters & Parameters]
-        D --> G[Extract Data to CSV (Hyper API)]
-        A --> H[Capture Dashboard Screenshot]
-        H --> I[Visual Detection (Vision LLM)]
-    end
-
-    subgraph 🔮 Phase 2: AI Mapping & Conversion
-        F1 & I --> J[Cross-Validated Visual Metadata]
-        F2 & G --> K[Calc-to-DAX Conversion via LLM]
-        K --> L[Generated DAX Measures]
-        F3 --> M[Coordinate Scaling for Power BI]
-        J & M & F4 --> N[Unified Visual Schema (final.json)]
-    end
-
-    subgraph 📊 Phase 3: Power BI Report Generation
-        O[Blank PBIP Template] --> P{Unpack PBIP}
-        P --> Q[report.json]
-        P --> R[model.bim]
-        N --> S[Generate Visual JSONs via LLM]
-        N --> T[Generate Filter JSONs via LLM]
-        L --> U[Inject DAX into model.bim]
-        S & T --> V[Inject Visuals into report.json]
-        R & Q --> W[Repack PBIP]
-        W --> X[Ready-to-Use Power BI Project]
-    end
-```
-
----
 
 ## 🎓 Core Features
 
