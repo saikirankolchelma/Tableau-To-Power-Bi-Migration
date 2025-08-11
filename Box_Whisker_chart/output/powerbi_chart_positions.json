@@ -1,0 +1,21 @@
+[
+  {
+    "dashboard": "Dashboard 1",
+    "chart": "Sheet 1",
+    "chart_type": "boxWhiskerPlot",
+    "x": 120.0,
+    "y": 90.0,
+    "width": 620.0,
+    "height": 400.0
+  }
+  ,
+  {
+    "dashboard": "Dashboard 1",
+    "chart": "Sheet 2",
+    "chart_type": "boxWhiskerPlot",
+    "x": 780.0,
+    "y": 90.0,
+    "width": 620.0,
+    "height": 400.0
+  }
+]

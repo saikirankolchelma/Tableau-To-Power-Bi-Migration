@@ -1,0 +1,47 @@
+[{
+  "Source": "Sheet 1",
+  "title": "Sales Distribution by Category",
+  "chart_type": "boxWhiskerPlot",
+  "labels": false,
+  "Rows": {
+    "Sales": "Orders"
+  },
+  "Columns": {
+    "Category": "Orders"
+  },
+  "Filters": {},
+  "Aggregation_row": "SUM(Sales)",
+  "Aggregation_columns": [],
+  "Hierarchy": null,
+  "Legend": {
+    "Sub-Category": "Orders"
+  },
+  "parameters_applied": false,
+  "tables": [
+    "Orders"
+  ]
+},
+{
+  "Source": "Sheet 2",
+  "title": "Profit Distribution by Ship Mode and Segment",
+  "chart_type": "boxWhiskerPlot",
+  "labels": false,
+  "Rows": {
+    "Profit": "Orders"
+  },
+  "Columns": {
+    "Ship Mode": "Orders"
+  },
+  "Filters": {},
+  "Aggregation_row": "SUM(Profit)",
+  "Aggregation_columns": [],
+  "Hierarchy": null,
+  "Legend": {
+    "Segment": "Orders"
+  },
+  "parameters_applied": false,
+  "tables": [
+    "Orders"
+  ]
+}
+]

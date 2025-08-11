@@ -1,0 +1,41 @@
+{
+    "calculations": {},
+    "usage": [],
+    "references": [
+        {
+            "Data Source": "Orders+ (Sample - Superstore)",
+            "Connection Type": "excel-direct",
+            "Database Name": "N/A",
+            "External Reference": "C:/Users/kashy/AppData/Local/Temp/TableauTemp/1246087659/Data/Downloads/Sample - Superstore.xls"
+        }
+    ],
+    "visuals": [
+        {
+            "Type": "Worksheet",
+            "Source": "Sheet 1",
+            "Rows": "[federated.1fvrkti1m8l5pl1fbpkpt0jf2ipu].[sum:Sales:qk]",
+            "Columns": "[federated.1fvrkti1m8l5pl1fbpkpt0jf2ipu].[none:Sub-Category:nk], [federated.1fvrkti1m8l5pl1fbpkpt0jf2ipu].[none:Category:nk]",
+            "Filters": ""
+        },
+        {
+            "Type": "Worksheet",
+            "Source": "Sheet 2",
+            "Rows": "[federated.1fvrkti1m8l5pl1fbpkpt0jf2ipu].[sum:Profit:qk]",
+            "Columns": "[federated.1fvrkti1m8l5pl1fbpkpt0jf2ipu].[none:Segment:nk], [federated.1fvrkti1m8l5pl1fbpkpt0jf2ipu].[none:Ship Mode:nk]",
+            "Filters": ""
+        },
+        {
+            "Type": "Dashboard",
+            "Source": "Dashboard 1",
+            "Worksheets": "",
+            "Rows": "",
+            "Columns": "",
+            "Filters": ""
+        }
+    ],
+    "csv_files": [],
+    "hyper_files": [
+        "c:\\Users\\ksaik\\OneDrive\\Desktop\\chart_generation\\Box_Whisker_chart\\output\\input_tableau_output\\Data\\Box or wishker chart .twb Files\\Orders+ (Sample - Superstore).hyper"
+    ],
+    "csv_preview": []
+}
