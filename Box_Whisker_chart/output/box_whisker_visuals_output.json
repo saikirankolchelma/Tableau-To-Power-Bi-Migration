@@ -1,0 +1,20 @@
+[
+  {
+    "config": "{\"name\": \"76282fa33cb94577964d014089d4e93b\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 120.0, \"y\": 90.0, \"z\": 0, \"width\": 620.0, \"height\": 400.0, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"BoxandWhiskerByMAQ1823AD39DT234AB532063E128AX\", \"projections\": {\"category\": [{\"queryRef\": \"Orders.Sub-Category\"}], \"xCategoryParent\": [{\"queryRef\": \"Orders.Category\"}], \"measure\": [{\"queryRef\": \"Sum(Orders.Sales)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"o\", \"Entity\": \"Orders\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"o\"}}, \"Property\": \"Category\"}, \"Name\": \"Orders.Category\", \"NativeReferenceName\": \"Category\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"o\"}}, \"Property\": \"Sub-Category\"}, \"Name\": \"Orders.Sub-Category\", \"NativeReferenceName\": \"Sub-Category\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"o\"}}, \"Property\": \"Sales\"}}, \"Function\": 0}, \"Name\": \"Sum(Orders.Sales)\", \"NativeReferenceName\": \"Sum of Sales\"}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Sheet 1'\"}}}}}]}}}",
+    "filters": "[]",
+    "height": 400.0,
+    "width": 620.0,
+    "x": 120.0,
+    "y": 90.0,
+    "z": 0
+  },
+  {
+    "config": "{\"name\": \"d139dcba731b49cfad70dbcb4b74c309\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 780.0, \"y\": 90.0, \"z\": 1, \"width\": 620.0, \"height\": 400.0, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"BoxandWhiskerByMAQ1823AD39DT234AB532063E128AX\", \"projections\": {\"category\": [{\"queryRef\": \"Orders.Segment\"}], \"xCategoryParent\": [{\"queryRef\": \"Orders.Ship Mode\"}], \"measure\": [{\"queryRef\": \"Sum(Orders.Profit)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"o\", \"Entity\": \"Orders\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"o\"}}, \"Property\": \"Ship Mode\"}, \"Name\": \"Orders.Ship Mode\", \"NativeReferenceName\": \"Ship Mode\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"o\"}}, \"Property\": \"Segment\"}, \"Name\": \"Orders.Segment\", \"NativeReferenceName\": \"Segment\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"o\"}}, \"Property\": \"Profit\"}}, \"Function\": 0}, \"Name\": \"Sum(Orders.Profit)\", \"NativeReferenceName\": \"Sum of Profit\"}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Sheet 2'\"}}}}}]}}}",
+    "filters": "[]",
+    "height": 400.0,
+    "width": 620.0,
+    "x": 780.0,
+    "y": 90.0,
+    "z": 1
+  }
+]

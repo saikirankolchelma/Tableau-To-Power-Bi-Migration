@@ -1,0 +1,49 @@
+
+# Tableau
+# Ignore default directories and preference files. [4]
+Datasources/
+Logs/
+Shapes/
+TabOnlineSyncClient/
+*.tps
+*.csv
+*.twb
+*.twbx
+# Power BI
+# Ignore Power BI specific files. [7]
+*.pbit
+*.pbix
+.pbi/
+*.Report/
+*.Dataset/
+
+# Power BI Project Files
+*.pbip
+*.pbids
+
+# Ignore Visual Studio temporary files and build results. [8, 11]
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+.vs/
+TestResult*/
+
+# General
+.DS_Store
+*.tmp
+*.log
+node_modules/
+
+
+# Ignore these folders and files
+pbi_migration/
+__pycache__/
+*.pyc
+*.ipynb_checkpoints
+.DS_Store
