@@ -1,0 +1,27 @@
+model Model
+	culture: en-IN
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-IN
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Sales Data Extract","Orders","People","Returns"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.144.878.0 (25.06)+9cca29236de5114792f4d7188221f91ad4a5cc50
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DateTableTemplate_c79f67c3-ef55-45f2-b114-de1a7168ac0e
+ref table 'Sales Data Extract'
+ref table LocalDateTable_4dac73b1-3def-4bc3-ba21-6b0f6023a97f
+ref table Orders
+ref table LocalDateTable_eebba3a7-5cff-47a4-a6bc-dea0fdd9c2a8
+ref table LocalDateTable_13be2223-be5f-4faf-a6eb-c2c11c3f71eb
+ref table People
+ref table Returns
+
+ref cultureInfo en-IN
+

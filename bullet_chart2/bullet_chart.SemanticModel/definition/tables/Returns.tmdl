@@ -1,0 +1,32 @@
+table Returns
+	lineageTag: b6dac100-a07e-498d-bccb-3755ff69293c
+
+	column Column1
+		dataType: string
+		lineageTag: 59aeec06-c67d-4df2-91f0-10d8367f4e6c
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column2
+		dataType: string
+		lineageTag: d0dbe534-afb0-42ab-bffe-a952ceee052d
+		summarizeBy: none
+		sourceColumn: Column2
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Returns = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\ksaik\OneDrive\Desktop\bullet chart\output\csv_output\Returns.csv"),[Delimiter=",", Columns=2, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

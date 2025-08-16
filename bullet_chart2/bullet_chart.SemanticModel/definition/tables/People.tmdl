@@ -1,0 +1,32 @@
+table People
+	lineageTag: ff527d59-2c13-4dd7-9f1f-382add7a4484
+
+	column Column1
+		dataType: string
+		lineageTag: 5d304e1a-ad3b-41fb-909f-8c8bec0554a6
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column2
+		dataType: string
+		lineageTag: 4ae5fc93-1974-4883-a278-75723911ddce
+		summarizeBy: none
+		sourceColumn: Column2
+
+		annotation SummarizationSetBy = Automatic
+
+	partition People = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\ksaik\OneDrive\Desktop\bullet chart\output\csv_output\People.csv"),[Delimiter=",", Columns=2, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

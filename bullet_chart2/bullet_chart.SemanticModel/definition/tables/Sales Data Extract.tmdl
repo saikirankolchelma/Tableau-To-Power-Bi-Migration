@@ -1,0 +1,152 @@
+table 'Sales Data Extract'
+	lineageTag: e90aab78-50a6-491c-be2b-e43a9c89ffdd
+
+	column 'Order Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b9b4b123-f94d-47d7-bf1a-fa3d6b41aea5
+		summarizeBy: none
+		sourceColumn: Order Date
+
+		variation Variation
+			isDefault
+			relationship: 6cc02a6d-7104-48e8-94f7-d2f9dfdc047f
+			defaultHierarchy: LocalDateTable_4dac73b1-3def-4bc3-ba21-6b0f6023a97f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Table Names'
+		dataType: string
+		lineageTag: 271b313d-32ed-486d-8a52-8183e409b270
+		summarizeBy: none
+		sourceColumn: Table Names
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Code'
+		dataType: string
+		lineageTag: 7855130b-6182-44c1-90fe-9fcb06631cba
+		summarizeBy: none
+		sourceColumn: Product Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Type'
+		dataType: string
+		lineageTag: 6a9ead59-db76-421e-a0c2-44b16c7bdc1a
+		summarizeBy: none
+		sourceColumn: Product Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product
+		dataType: string
+		lineageTag: bd29d198-e846-44a6-a285-e96265e5a210
+		summarizeBy: none
+		sourceColumn: Product
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Margin'
+		dataType: double
+		lineageTag: 95890ff6-dec5-4a8d-92c2-7a4597e8e1ee
+		summarizeBy: sum
+		sourceColumn: Sales Margin
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Sales Amount'
+		dataType: double
+		lineageTag: bac27734-050b-4f13-a7be-4022cbe00343
+		summarizeBy: sum
+		sourceColumn: Sales Amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Sales Margin Target'
+		dataType: double
+		lineageTag: 35a670a5-7a0f-40b0-8af3-6e88492fa7f4
+		summarizeBy: sum
+		sourceColumn: Sales Margin Target
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Sales Amount Target'
+		dataType: double
+		lineageTag: 45800042-517c-4d0f-8078-e75d4703a1e2
+		summarizeBy: sum
+		sourceColumn: Sales Amount Target
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Country
+		dataType: string
+		lineageTag: 11c65f5e-bc3a-4fa4-8cb2-31c9fe32a239
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column State
+		dataType: string
+		lineageTag: 94e8a6aa-c783-4fbb-b47b-32a44ae3b218
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 4fe53076-d879-497e-8b30-46793ea8cd9c
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Quantity'
+		dataType: int64
+		formatString: 0
+		lineageTag: 45bb849b-02fe-4214-9683-55e602083e16
+		summarizeBy: sum
+		sourceColumn: Sales Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column Customer
+		dataType: string
+		lineageTag: 4d79246b-87e0-4b8d-b0e7-232516788313
+		summarizeBy: none
+		sourceColumn: Customer
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Sub Group'
+		dataType: string
+		lineageTag: 5581f01c-f296-4966-85d1-634d18acebde
+		summarizeBy: none
+		sourceColumn: Product Sub Group
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Sales Data Extract' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\ksaik\OneDrive\Desktop\bullet chart\output\csv_output\Sales Data Extract.csv"),[Delimiter=",", Columns=15, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Order Date", type datetime}, {"Table Names", type text}, {"Product Code", type text}, {"Product Type", type text}, {"Product", type text}, {"Sales Margin", type number}, {"Sales Amount", type number}, {"Sales Margin Target", type number}, {"Sales Amount Target", type number}, {"Country", type text}, {"State", type text}, {"City", type text}, {"Sales Quantity", Int64.Type}, {"Customer", type text}, {"Product Sub Group", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,9 @@
+{
+  "dashboard": "Sales Dashboard",
+  "worksheet": "Sales Amount vs Target by Product Sub Group",
+  "chart_type": "bullet Chart",
+  "x": 120.0,
+  "y": 180.0,
+  "width": 950.0,
+  "height": 480.0
+}

@@ -1,0 +1,229 @@
+{
+    "calculations": {
+        "[Calculation_1284088864424353795]": {
+            "field_name": "circle axis 0",
+            "formula": "MIN(0)",
+            "data_source": "Sample - Superstore"
+        },
+        "[Calculation_1822269019982671875]": {
+            "field_name": "Select Month1ord",
+            "formula": "case [Parameters].[Parameter 2]\r\n WHEN \"January\" THEN IF DATEPART('month', [Order Date]) = 1 THEN 'January' END\r\n WHEN \"Febuary\" THEN IF DATEPART('month', [Order Date]) = 2 THEN 'Febuary' END\r\n WHEN \"March\" THEN IF DATEPART('month', [Order Date]) = 3 THEN 'March' END\r\n WHEN \"April\" THEN IF DATEPART('month', [Order Date]) = 4 THEN 'April' END\r\n WHEN \"May\" THEN IF DATEPART('month', [Order Date]) = 5 THEN 'May' END\r\n WHEN \"June\" THEN IF DATEPART('month', [Order Date]) = 6 THEN 'June' END\r\n WHEN \"July\" THEN IF DATEPART('month', [Order Date]) = 7 THEN 'July' END\r\n WHEN \"August\" THEN IF DATEPART('month', [Order Date]) = 8 THEN 'August' END\r\n WHEN \"September\" THEN IF DATEPART('month', [Order Date]) = 9 THEN 'September' END\r\n WHEN \"October\" THEN IF DATEPART('month', [Order Date]) = 10 THEN 'October' END\r\n WHEN \"November\" THEN IF DATEPART('month', [Order Date]) = 11 THEN 'November' END\r\n WHEN \"December\" THEN IF DATEPART('month', [Order Date]) = 12 THEN 'December' END\r\n\r\nEND",
+            "data_source": "Sample - Superstore"
+        }
+    },
+    "usage": [
+        {
+            "worksheet": "Sheet 12",
+            "calculation": "[Calculation_1284088864424353795]",
+            "field_name": "circle axis 0",
+            "data_source": "Sample - Superstore"
+        },
+        {
+            "worksheet": "Sheet 2 (3)",
+            "calculation": "[Calculation_1284088864424353795]",
+            "field_name": "circle axis 0",
+            "data_source": "Sample - Superstore"
+        },
+        {
+            "worksheet": "Sheet 2 (4)",
+            "calculation": "[Calculation_1284088864424353795]",
+            "field_name": "circle axis 0",
+            "data_source": "Sample - Superstore"
+        },
+        {
+            "worksheet": "Sub category by sales",
+            "calculation": "[Calculation_1284088864424353795]",
+            "field_name": "circle axis 0",
+            "data_source": "Sample - Superstore"
+        },
+        {
+            "worksheet": "subcategory by sales",
+            "calculation": "[Calculation_1284088864424353795]",
+            "field_name": "circle axis 0",
+            "data_source": "Sample - Superstore"
+        }
+    ],
+    "references": [
+        {
+            "Data Source": "Orders+ (Sample - Superstore)",
+            "Connection Type": "excel-direct",
+            "Database Name": "N/A",
+            "External Reference": "C:/Users/kashy/OneDrive/Documents/My Tableau Repository/Datasources/2024.1/en_US-US/Sample - Superstore.xls"
+        }
+    ],
+    "visuals": [
+        {
+            "Type": "Worksheet",
+            "Source": "Country Profi",
+            "Rows": "([federated.0jkzlny1kazb2c1djzfh30tnsznv].[usr:Calculation_1284088864431878164:qk] + [federated.0jkzlny1kazb2c1djzfh30tnsznv].[usr:Calculation_1284088864431878164:qk])",
+            "Columns": "[federated.0jkzlny1kazb2c1djzfh30tnsznv].[sum:Profit:qk], [federated.0jkzlny1kazb2c1djzfh30tnsznv].[none:Country/Region:nk]",
+            "Filters": ""
+        },
+        {
+            "Type": "Worksheet",
+            "Source": "Country Sales",
+            "Rows": "([federated.0jkzlny1kazb2c1djzfh30tnsznv].[usr:Calculation_1284088864431878164:qk] + [federated.0jkzlny1kazb2c1djzfh30tnsznv].[usr:Calculation_1284088864431878164:qk])",
+            "Columns": "[federated.0jkzlny1kazb2c1djzfh30tnsznv].[sum:Sales:qk], [federated.0jkzlny1kazb2c1djzfh30tnsznv].[none:Country/Region:nk]",
+            "Filters": ""
+        },
+        {
+            "Type": "Worksheet",
+            "Source": "Sheet 1",
+            "Rows": "[federated.0jkzlny1kazb2c1djzfh30tnsznv].[none:Product Name:nk]",
+            "Columns": "[federated.0jkzlny1kazb2c1djzfh30tnsznv].[sum:Discount:qk]",
+            "Filters": ""
+        },
+        {
+            "Type": "Worksheet",
+            "Source": "Sheet 12",
+            "Rows": "([federated.0jkzlny1kazb2c1djzfh30tnsznv].[sum:Sales:qk] + ([federated.0jkzlny1kazb2c1djzfh30tnsznv].[sum:Quantity:qk] + [federated.0jkzlny1kazb2c1djzfh30tnsznv].[usr:Calculation_1284088864424353795:qk]))",
+            "Columns": "[federated.0jkzlny1kazb2c1djzfh30tnsznv].[none:Sub-Category:nk], [federated.0jkzlny1kazb2c1djzfh30tnsznv].[sum:Sales:qk]",
+            "Filters": ""
+        },
+        {
+            "Type": "Worksheet",
+            "Source": "Sheet 13",
+            "Rows": "[federated.0jkzlny1kazb2c1djzfh30tnsznv].[none:Region:nk]",
+            "Columns": "[federated.0jkzlny1kazb2c1djzfh30tnsznv].[sum:Profit:qk]",
+            "Filters": ""
+        },
+        {
+            "Type": "Worksheet",
+            "Source": "Sheet 19",
+            "Rows": "",
+            "Columns": "",
+            "Filters": ""
+        },
+        {
+            "Type": "Worksheet",
+            "Source": "Sheet 2 (3)",
+            "Rows": "([federated.0jkzlny1kazb2c1djzfh30tnsznv].[sum:Quantity:qk] + ([federated.0jkzlny1kazb2c1djzfh30tnsznv].[sum:Discount:qk] + [federated.0jkzlny1kazb2c1djzfh30tnsznv].[usr:Calculation_1284088864424353795:qk]))",
+            "Columns": "[federated.0jkzlny1kazb2c1djzfh30tnsznv].[none:Sub-Category:nk], [federated.0jkzlny1kazb2c1djzfh30tnsznv].[:Measure Names]",
+            "Filters": ""
+        },
+        {
+            "Type": "Worksheet",
+            "Source": "Sheet 2 (4)",
+            "Rows": "([federated.0jkzlny1kazb2c1djzfh30tnsznv].[sum:Discount:qk] + ([federated.0jkzlny1kazb2c1djzfh30tnsznv].[sum:Quantity:qk] + [federated.0jkzlny1kazb2c1djzfh30tnsznv].[usr:Calculation_1284088864424353795:qk]))",
+            "Columns": "[federated.0jkzlny1kazb2c1djzfh30tnsznv].[none:Sub-Category:nk], [federated.0jkzlny1kazb2c1djzfh30tnsznv].[:Measure Names]",
+            "Filters": ""
+        },
+        {
+            "Type": "Worksheet",
+            "Source": "Sheet 4",
+            "Rows": "([federated.0jkzlny1kazb2c1djzfh30tnsznv].[usr:Calculation_1284088864431878164:qk] + [federated.0jkzlny1kazb2c1djzfh30tnsznv].[usr:Calculation_1284088864431878164:qk])",
+            "Columns": "[federated.0jkzlny1kazb2c1djzfh30tnsznv].[sum:Sales:qk], [federated.0jkzlny1kazb2c1djzfh30tnsznv].[none:Region:nk]",
+            "Filters": ""
+        },
+        {
+            "Type": "Worksheet",
+            "Source": "Sheet 5",
+            "Rows": "[federated.0jkzlny1kazb2c1djzfh30tnsznv].[none:Sub-Category:nk]",
+            "Columns": "[federated.0jkzlny1kazb2c1djzfh30tnsznv].[sum:Sales:qk]",
+            "Filters": "[federated.0jkzlny1kazb2c1djzfh30tnsznv].[none:Country/Region:nk]"
+        },
+        {
+            "Type": "Worksheet",
+            "Source": "Sub category by sales",
+            "Rows": "([federated.0jkzlny1kazb2c1djzfh30tnsznv].[sum:Sales:qk] + ([federated.0jkzlny1kazb2c1djzfh30tnsznv].[sum:Quantity:qk] + [federated.0jkzlny1kazb2c1djzfh30tnsznv].[usr:Calculation_1284088864424353795:qk]))",
+            "Columns": "[federated.0jkzlny1kazb2c1djzfh30tnsznv].[none:Sub-Category:nk], [federated.0jkzlny1kazb2c1djzfh30tnsznv].[sum:Sales:qk]",
+            "Filters": ""
+        },
+        {
+            "Type": "Worksheet",
+            "Source": "bullet",
+            "Rows": "[federated.0jkzlny1kazb2c1djzfh30tnsznv].[none:Category:nk]",
+            "Columns": "[federated.0jkzlny1kazb2c1djzfh30tnsznv].[:Measure Names], ([federated.0jkzlny1kazb2c1djzfh30tnsznv].[sum:Profit:qk] + [federated.0jkzlny1kazb2c1djzfh30tnsznv].[sum:Sales:qk]), [federated.0jkzlny1kazb2c1djzfh30tnsznv].[none:Category:nk]",
+            "Filters": ""
+        },
+        {
+            "Type": "Worksheet",
+            "Source": "country Returns ",
+            "Rows": "([federated.0jkzlny1kazb2c1djzfh30tnsznv].[usr:Calculation_1284088864431878164:qk] + [federated.0jkzlny1kazb2c1djzfh30tnsznv].[usr:Calculation_1284088864431878164:qk])",
+            "Columns": "[federated.0jkzlny1kazb2c1djzfh30tnsznv].[__tableau_internal_object_id__].[cnt:Returns_26274EA40527458993CB18D164ED022C:qk], [federated.0jkzlny1kazb2c1djzfh30tnsznv].[sum:Quantity:qk], [federated.0jkzlny1kazb2c1djzfh30tnsznv].[sum:Profit:qk], [federated.0jkzlny1kazb2c1djzfh30tnsznv].[none:Country/Region:nk]",
+            "Filters": ""
+        },
+        {
+            "Type": "Worksheet",
+            "Source": "dasbord name",
+            "Rows": "",
+            "Columns": "",
+            "Filters": ""
+        },
+        {
+            "Type": "Worksheet",
+            "Source": "subcategory by sales",
+            "Rows": "([federated.0jkzlny1kazb2c1djzfh30tnsznv].[sum:Sales:qk] + ([federated.0jkzlny1kazb2c1djzfh30tnsznv].[sum:Quantity:qk] + [federated.0jkzlny1kazb2c1djzfh30tnsznv].[usr:Calculation_1284088864424353795:qk]))",
+            "Columns": "[federated.0jkzlny1kazb2c1djzfh30tnsznv].[none:Sub-Category:nk], [federated.0jkzlny1kazb2c1djzfh30tnsznv].[:Measure Names]",
+            "Filters": ""
+        },
+        {
+            "Type": "Worksheet",
+            "Source": "total discount",
+            "Rows": "",
+            "Columns": "[federated.0jkzlny1kazb2c1djzfh30tnsznv].[sum:Discount:qk]",
+            "Filters": ""
+        },
+        {
+            "Type": "Worksheet",
+            "Source": "total profit",
+            "Rows": "",
+            "Columns": "[federated.0jkzlny1kazb2c1djzfh30tnsznv].[sum:Profit:qk]",
+            "Filters": ""
+        },
+        {
+            "Type": "Worksheet",
+            "Source": "total sales",
+            "Rows": "",
+            "Columns": "[federated.0jkzlny1kazb2c1djzfh30tnsznv].[sum:Sales:qk]",
+            "Filters": ""
+        },
+        {
+            "Type": "Worksheet",
+            "Source": "user name",
+            "Rows": "",
+            "Columns": "",
+            "Filters": ""
+        },
+        {
+            "Type": "Dashboard",
+            "Source": "Dashboard 1",
+            "Worksheets": "",
+            "Rows": "",
+            "Columns": "",
+            "Filters": ""
+        },
+        {
+            "Type": "Dashboard",
+            "Source": "Dashboard 2",
+            "Worksheets": "",
+            "Rows": "",
+            "Columns": "",
+            "Filters": ""
+        },
+        {
+            "Type": "Dashboard",
+            "Source": "Dashboard 3",
+            "Worksheets": "",
+            "Rows": "",
+            "Columns": "",
+            "Filters": ""
+        },
+        {
+            "Type": "Dashboard",
+            "Source": "Dashboard 4",
+            "Worksheets": "",
+            "Rows": "",
+            "Columns": "",
+            "Filters": ""
+        }
+    ],
+    "csv_files": [],
+    "hyper_files": [
+        "c:\\Users\\ksaik\\OneDrive\\Desktop\\bullet chart\\output\\input_tableau_output\\Data\\Box or wishker chart .twb Files\\Orders+ (Sample - Superstore).hyper",
+        "c:\\Users\\ksaik\\OneDrive\\Desktop\\bullet chart\\output\\input_tableau_output\\Data\\dataset\\Orders+ (Product Inventory Sheet).hyper",
+        "c:\\Users\\ksaik\\OneDrive\\Desktop\\bullet chart\\output\\input_tableau_output\\Data\\TableauTemp\\#TableauTemp_0n7nb1l0shuea01dv4dmz1g544v8.hyper",
+        "c:\\Users\\ksaik\\OneDrive\\Desktop\\bullet chart\\output\\input_tableau_output\\Data\\TableauTemp\\#TableauTemp_1qqo4ca0fwu9ww1bqcwkp17adzth.hyper"
+    ],
+    "csv_preview": []
+}

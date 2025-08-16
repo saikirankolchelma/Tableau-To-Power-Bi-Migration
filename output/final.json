@@ -1,0 +1,29 @@
+
+
+{
+  "Source": "Geo Comparison",
+  "title": "Sales Amount vs Margin by State",
+  "chart_type": "bulletChart",
+  "labels": true,
+  "Rows": {
+    "State": "Sales Data Extract"
+  },
+  "Columns": {
+    "Sales Amount": "Sales Data Extract",
+    "Sales Margin": "Sales Data Extract"
+  },
+  "Filters": {},
+  "Aggregation_row": "",
+  "Aggregation_columns": [
+    "SUM(Sales Amount)",
+    "SUM(Sales Margin)"
+  ],
+  "Hierarchy": null,
+  "Legend": {
+    "State": "Sales Data Extract"
+  },
+  "parameters_applied": false,
+  "tables": [
+   "Sales Data Extract"
+  ]
+}
